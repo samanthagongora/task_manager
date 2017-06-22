@@ -1,8 +1,6 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    bundle (0.0.1)
-      bundler
     mustermann (1.0.0)
     rack (2.0.3)
     rack-protection (2.0.0)
@@ -21,7 +19,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bundle
   shotgun
   sinatra
   sqlite3
