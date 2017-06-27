@@ -17,10 +17,10 @@ end
     erb :new
   end
 
-  # get '/tasks/:id' do
-  #   @task = Task.find(params[:id])
-  #   erb :show
-  # end
+  get '/tasks/:id' do
+    @task = Task.find(params[:id])
+    erb :show
+  end
 
   get '/tasks/:id/edit' do
    @task = Task.find(params[:id])
@@ -35,6 +35,11 @@ end
   post '/tasks' do
     task = Task.new(params[:task])
     task.save
+    redirect '/tasks'
+  end
+
+  delete '/tasks/:id' do |id|
+    Task.destroy(id.to_i)
     redirect '/tasks'
   end
 end
