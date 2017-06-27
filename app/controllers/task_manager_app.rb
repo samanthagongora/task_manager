@@ -8,9 +8,9 @@ class TaskManagerApp < Sinatra::Base
   end
 
   get '/tasks' do
-    @tasks = Task.all
-    erb :index
-  end
+  @tasks = Task.all
+  erb :index
+end
 
   get '/tasks/new' do
     erb :new
@@ -20,6 +20,7 @@ class TaskManagerApp < Sinatra::Base
     @task = Task.find(params[:id])
     erb :show
   end
+
 
   post '/tasks' do
     task = Task.new(params[:task])

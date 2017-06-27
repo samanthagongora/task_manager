@@ -1,4 +1,7 @@
 <h1> All Tasks</h1>
+<% if params[:location] == 'Denver' %>
+  <h3>You are located in Denver!</h3>
+<% end %>
 
 <% @tasks.each do |task| %>
   <h3><a href="/tasks/<%= task.id %>"><%= task.title %></a></h3>
